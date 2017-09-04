@@ -1,5 +1,7 @@
 FROM ubuntu:16.04
 
+# trigger image build: 2017-09-05
+
 RUN apt-get update && \
     apt-get install -y wget && \
     wget --quiet -O /tmp/dropboxd.tar.gz "https://www.dropbox.com/download/?plat=lnx.x86_64" && \
