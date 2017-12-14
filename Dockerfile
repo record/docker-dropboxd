@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 
-# trigger image build: 2017-09-05
+# trigger image build: 2017-12-14
 
 RUN apt-get update && \
     apt-get install -y wget && \
