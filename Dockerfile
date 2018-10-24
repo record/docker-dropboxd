@@ -1,11 +1,12 @@
 FROM ubuntu:18.04
 
-# trigger image build: 2018-08-11
+# trigger image build: 2018-10-24
 
 RUN apt-get update && \
     apt-get install -y wget && \
     wget --quiet -O /tmp/dropboxd.tar.gz "https://www.dropbox.com/download/?plat=lnx.x86_64" && \
     tar -xf /tmp/dropboxd.tar.gz -C $HOME && \
+    chown -R root:root $HOME/.dropbox-dist && \
     rm /tmp/dropboxd.tar.gz && \
     mkdir -p ~/bin && \
     wget -O ~/bin/dropbox.py "http://www.dropbox.com/download?dl=packages/dropbox.py" && \
