@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-# trigger image build: 2018-10-24
+# trigger image build: 2018-11-02
 
 RUN apt-get update && \
     apt-get install -y wget && \
